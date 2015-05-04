@@ -10,7 +10,7 @@ func init() {
 	Setup()
 }
 
-// Extract and remove sub-command from os.Args.
+// Extract and remove sub-command from `os.Args`.
 // It's automatically called through `init`
 func Setup() {
 	if len(os.Args) > 1 && os.Args[1][0] != '-' {
