@@ -13,6 +13,10 @@ func init() {
 // Extract and remove sub-command from `os.Args`.
 // It's automatically called through `init`
 func Setup() {
+	if name != "" {
+		return
+	}
+
 	if len(os.Args) > 1 && os.Args[1][0] != '-' {
 		name = os.Args[1]
 		os.Args = append(os.Args[:1], os.Args[2:]...)
